@@ -93,10 +93,12 @@ public class Monster {
         if (damage > 0){
             System.out.println("The creature was hit for " + damage + " damage");
             if (hp - damage <= 0){
+                hp = 0;
                 System.out.println("Oh no! the creature has perished");
                 System.out.println(this);
                 return false;
             }
+            hp -= damage;
             System.out.println(this);
         }
         return true;
